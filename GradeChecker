@@ -1,0 +1,30 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
+public class GradeChecker
+{
+  class StudentGrades {
+    public string StudentName { get; set;}
+    public int EnglishMark {get; set;}
+    public int MathMark {get; set;}
+    public int SocialMark {get; set;}
+    public int ScienceMark {get; set;}
+    public int ReligionMark {get; set;}
+  }
+
+  public static void Main()
+  {
+    var student = new Dictionary<int, StudentGrades> {
+      { 1, new StudentGrades {StudentName="Ken", EnglishMark=87, MathMark=87, SocialMark=87, ScienceMark=87, ReligionMark=87, }},
+      { 2838831, new StudentGrades {StudentName="Guile", EnglishMark=93, MathMark=77, SocialMark=82, ScienceMark=99, ReligionMark=75, }},
+      { 2756834, new StudentGrades {StudentName="Jan", EnglishMark=87, MathMark=87, SocialMark=87, ScienceMark=87, ReligionMark=87, }},
+      { 2987657, new StudentGrades {StudentName="Elein", EnglishMark=87, MathMark=87, SocialMark=87, ScienceMark=87, ReligionMark=87, }},
+      { 2745635, new StudentGrades {StudentName="Sam", EnglishMark=87, MathMark=87, SocialMark=87, ScienceMark=87, ReligionMark=87, }}
+    };
+
+    foreach (var index in student) {
+      Console.WriteLine($"Student {index} is {student[].StudentName}");
+    }
+  }
+}
