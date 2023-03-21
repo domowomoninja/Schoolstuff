@@ -1,0 +1,44 @@
+import greenfoot.*;  // (World, Actor, GreenfootImage, and Greenfoot)
+
+/**
+ * This class defines a crab. Crabs live on the beach.
+ */
+public class Crab extends Animal
+{
+    
+    public void act() {
+
+        lookForWorm();
+        getKeyInput();
+       
+        move(10);
+    }
+   
+    
+    //turn when we hit the world edge,
+    
+    public void getKeyInput() {
+        if(Greenfoot.isKeyDown("Left")) {
+            turn(5);
+        }
+        if(Greenfoot.isKeyDown("Right")) {
+            turn(-5);
+        }
+    }
+    
+    //
+    public void lookForWorm() {
+        if ( canSee (worm.class) )
+        {
+            eat (worm.class);
+            Greenfoot.playSound("slurp.wav");
+        }
+    }
+    public int getRandomNumber(int start,int end)
+    {
+       int normal = Greenfoot.getRandomNumber(end-start+1);
+       return normal+start;
+    }
+}
+
+
